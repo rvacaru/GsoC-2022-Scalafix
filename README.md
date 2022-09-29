@@ -20,12 +20,12 @@ tool can be used as a CLI from Terminal, as part of your build with
 [Maven](https://github.com/evis/scalafix-maven-plugin) or [SBT](https://github.com/scalacenter/sbt-scalafix),
 and as part of your CICD pipelines.
 
-[Scalafix](https://docs.scala-lang.org/scala3/guides/migration/tooling-tour.html#scalafix) is part of the 
+[Scalafix](https://docs.scala-lang.org/scala3/guides/migration/tooling-tour.html#scalafix) is also an important part of the 
 set of migration tools which will make it easier to migrate Scala code to Scala 3.
 
 ## Benefits to the Community
 
-The reasons why porting Scalafix and ExplicitResultTypes to Scala 3 are:
+The good reasons for porting Scalafix and ExplicitResultTypes to Scala 3 are:
 - Linting and re-writing code capabilities will be available for Scala 3 projects
   - More readability, better developer experience, better maintainability of Scala3 projects  
 - Scalafix rules written in Scala 3 will be compatible and compilable 
@@ -33,7 +33,7 @@ The reasons why porting Scalafix and ExplicitResultTypes to Scala 3 are:
 
 ## Status before the GSoC project
 
-Scalafix currently build in Scala versions 2.11, 2.12 and 2.13 . It relies on the Scala 2 compiler for:
+Scalafix is currently build in Scala versions 2.11, 2.12 and 2.13. It relies on the Scala 2 compiler for:
 - The [ExplicitResultTypes Rule](https://scalacenter.github.io/scalafix/docs/rules/ExplicitResultTypes.html), 
   where code is compiled in order to infer the Types of the members
 - The [Custom / External Rules](https://scalacenter.github.io/scalafix/docs/developers/tutorial.html) compilation
@@ -71,7 +71,7 @@ A list of web resources used while working on the project:
 
 ## Remaining work - Next steps
 
-The Project is unfortunately not finished even given a project extension from the regular 12 weeks length.
+The Project is unfortunately not finished, even given a project extension from the regular 12 weeks length.
 These are the task still to be done:
 
 - Finish the cross compilation of Scalafix to Scala 3

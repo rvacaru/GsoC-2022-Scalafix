@@ -116,7 +116,7 @@ These are the task still to be done:
 
 ## Acknowledgements
 
-I really want to express my gratitude and thank my mentors Brice Jaglin and Meriam Lachkar for their consistent help during the project,
+I really want to express my gratitude and thank my mentors **Brice Jaglin** and **Meriam Lachkar** for their consistent help during the project,
 without their support and advice this wouldn't have been possible.
 I also want to say thank you to Google and everyone involved in the GSoC programme, which is an awesome initiative to promote
 Open Source.

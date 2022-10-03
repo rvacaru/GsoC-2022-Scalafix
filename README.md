@@ -2,30 +2,30 @@
 
 ## Table of Contents
 - [GSoC 2022 - Scalafix Final Submission](#gsoc-2022---scalafix-final-submission)
-  * [Project Details](#project-details)
-  * [Scalafix](#scalafix)
-  * [Benefits to the Community](#benefits-to-the-community)
-  * [Status before the GSoC project](#status-before-the-gsoc-project)
-  * [Work Done](#work-done)
-  * [Useful resources](#useful-resources)
-  * [Remaining work - Next steps](#remaining-work---next-steps)
-  * [Acknowledgements](#acknowledgements)
-  * [Scalafix Community](#scalafix-community)
+    * [Project Details](#project-details)
+    * [Scalafix](#scalafix)
+    * [Benefits to the Community](#benefits-to-the-community)
+    * [Status before the GSoC project](#status-before-the-gsoc-project)
+    * [Work Done](#work-done)
+    * [Useful Resources](#useful-resources)
+    * [Remaining Work - Next Steps](#remaining-work---next-steps)
+    * [Acknowledgements](#acknowledgements)
+    * [Scalafix Community](#scalafix-community)
 
 
 
 ## Project Details
 
-|                        |                                                                                                                                                                            |
-|------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Project name           | Porting of Scalafix ExplicitResultTypes rule to Scala 3                                                                                                                    |
-| Organization           | [Scala Center](https://summerofcode.withgoogle.com/programs/2022/organizations/scala-center), [Scala Center Official Site](https://scala.epfl.ch/)                         |
-| Scala Center idea link | [Project proposal link](https://github.com/scalacenter/GoogleSummerOfCode2022#adapt-the-explicitresulttypes-scalafix-rule-for-scala-3)                                     |
+|                        |                                                                                                                                                                          |
+|------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Project name           | Porting of Scalafix ExplicitResultTypes rule to Scala 3                                                                                                                  |
+| Organization           | [Scala Center](https://summerofcode.withgoogle.com/programs/2022/organizations/scala-center), [Scala Center Official Site](https://scala.epfl.ch/)                       |
+| Scala Center idea link | [Project proposal link](https://github.com/scalacenter/GoogleSummerOfCode2022#adapt-the-explicitresulttypes-scalafix-rule-for-scala-3)                                   |
 | Github Issues          | [ExplicitResultType issue](https://github.com/scalacenter/scalafix/issues/1583), [Scalafix cross compiled to scala-3](https://github.com/scalacenter/scalafix/issues/1316) |
-| Project links          | [Scalafix Github repo](https://github.com/scalacenter/scalafix), [Scalafix website](https://scalacenter.github.io/scalafix/)                                               |
-| Mentors                | [Brice Jaglin](https://github.com/bjaglin), [Meriam Lachkar](https://github.com/mlachkar)                                                                                  |
-| Contributor            | [Razvan Vacaru](https://www.linkedin.com/in/razvan-vacaru-17787b5a)                                                                                                        |
-| GSoC Proposal          | [GSoC Link](https://summerofcode.withgoogle.com/programs/2022/projects/gQ08FcXb)                                                                                           |
+| Project links          | [Scalafix Github repo](https://github.com/scalacenter/scalafix), [Scalafix website](https://scalacenter.github.io/scalafix/)                                             |
+| Mentors                | [Meriam Lachkar](https://github.com/mlachkar), [Brice Jaglin](https://github.com/bjaglin)                                                                                |
+| Contributor            | [Razvan Vacaru](https://www.linkedin.com/in/razvan-vacaru-17787b5a)                                                                                                      |
+| GSoC Proposal          | [GSoC Link](https://summerofcode.withgoogle.com/programs/2022/projects/gQ08FcXb)                                                                                         |
 
 
 
@@ -33,7 +33,7 @@
 
 Scalafix is a linting, code completion and rewriting tool for Scala codebases. The Scalafix
 tool can be used as a CLI from Terminal, as part of your build with the
-[Maven plugin](https://github.com/evis/scalafix-maven-plugin), [Mill plugin](https://github.com/joan38/mill-scalafix) 
+[Maven plugin](https://github.com/evis/scalafix-maven-plugin), [Mill plugin](https://github.com/joan38/mill-scalafix)
 or the [SBT plugin](https://github.com/scalacenter/sbt-scalafix),
 and finally Scalafix can run as part of your CICD pipelines.
 
@@ -51,7 +51,7 @@ set of migration tools which will make it easier to migrate Scala code to Scala 
 The good reasons for porting Scalafix and ExplicitResultTypes to Scala 3 are:
 - Linting and re-writing code capabilities will be available for Scala 3 projects
     - More readability of Scala3 code
-    - Better developer experience 
+    - Better developer experience
     - Better maintainability of Scala3 projects
 - Scalafix rules written in Scala 3 will be compatible and compilable in Scala 2
 - Scalafix helps in migrating code between Scala 2 and Scala 3 versions
@@ -110,20 +110,27 @@ These are the task still to be done:
     - In particular fixing unit tests `ScalafixArgumentsSuite` and `ScalafixImplSuite`
 - Publishing a new Scalafix version for Scala 3, without ExplicitResultTypes
 - Implement ExplicitResultTypes using the dotty compiler
-- Add unit tests and documentation
 
+Next Steps:
+
+- Make Scalafix-cli_3 fallback on loading 2.13 artifacts for requested community rules
+- Advocate for community rules to cross compile to Scala 3 by updating:
+  - [Scalafix Giter8 template](https://github.com/scalacenter/scalafix.g8) 
+  - [Scalafix docs on cross publishing rule](https://scalacenter.github.io/scalafix/docs/developers/cross-publish-custom-rules.html)
+  artifacts not yet available in Scala 3
+- Support for running Scalafix-cli_3 in [sbt-scalafix](https://github.com/scalacenter/sbt-scalafix) plugin
 
 
 ## Acknowledgements
 
-I really want to express my gratitude and thank my mentors **Brice Jaglin** and **Meriam Lachkar** for their consistent help during the project,
+I really want to express my gratitude and thank my mentors **Meriam Lachkar** and **Brice Jaglin** for their consistent help during the project,
 without their support and advice this wouldn't have been possible.
 I also want to say thank you to Google and everyone involved in the GSoC programme, which is an awesome initiative to promote
 Open Source.
 
-This project is dear to me personally, for many reasons. First of all, this is a small dream come true, to contribute 
-to such an important open source organization like Scala Center. Only some years ago I was learning Scala from 
-the official EPFL Coursera course, and now I'm helping with the Scala 3 migration via Scalafix. This proves again 
+This project is dear to me personally, for many reasons. First of all, this is a small dream come true, to contribute
+to such an important open source organization like Scala Center. Only some years ago I was learning Scala from
+the official EPFL Coursera course, and now I'm helping with the Scala 3 migration via Scalafix. This proves again
 that with perseverance, consistency and will power we can realize our dreams.
 Moreover with this project I'm completing my first decade of career, and I think of it as a nice cherry on the cake.
 

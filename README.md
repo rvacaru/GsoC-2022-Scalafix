@@ -81,11 +81,11 @@ A list of Pull requests, or commits, of the work done presented in chronological
 - [Scalafix-rules module cross compiled in Scala 3](https://github.com/scalacenter/scalafix/pull/1643)
 - [Update Unit module Scalatest version to 3.2.13](https://github.com/scalacenter/scalafix/pull/1661)
 - [RuleCompiler using dotty compiler, for Scala 3 compilation](https://github.com/scalacenter/scalafix/pull/1650/files#diff-fdc2359988794371ab0f9ef79b3204495b197cbff15dd4d84123edf8c512c4c2)
-- [(WIP) Scalafix-Reflect + Scalafix-cli + Test modules cross compiled to Scala 3](https://github.com/scalacenter/scalafix/pull/1650)
-    - (Done) [Squashed commits: Scalafix-reflect3 cross compiled for Scala 3](https://github.com/scalacenter/scalafix/pull/1650/commits/6c35519958a628f1a629a19892f4d816f55d12f1)
-    - (Done) [Squashed commits: Scalafix-cli3 cross compiled for Scala 3](https://github.com/scalacenter/scalafix/pull/1650/commits/390b84888fa90e2614beb0cda80cdc31bdca8429)
-    - (Done) [Squashed commits: Scalafix-testkit3 cross compiled for Scala 3](https://github.com/scalacenter/scalafix/pull/1650/commits/e08e1cb975b77e6b8d432211902471aa11349f48)
-    - (WIP) Unit module test fixes, RuleCompiler fixes, minor refactoring to code or sbt build, see [commits](https://github.com/scalacenter/scalafix/pull/1650/commits)
+- [Scalafix-Reflect + Scalafix-cli + Test modules cross compiled to Scala 3](https://github.com/scalacenter/scalafix/pull/1650)
+    - [Squashed commits: Scalafix-reflect3 cross compiled for Scala 3](https://github.com/scalacenter/scalafix/pull/1650/commits/6c35519958a628f1a629a19892f4d816f55d12f1)
+    - [Squashed commits: Scalafix-cli3 cross compiled for Scala 3](https://github.com/scalacenter/scalafix/pull/1650/commits/390b84888fa90e2614beb0cda80cdc31bdca8429)
+    - [Squashed commits: Scalafix-testkit3 cross compiled for Scala 3](https://github.com/scalacenter/scalafix/pull/1650/commits/e08e1cb975b77e6b8d432211902471aa11349f48)
+    - Unit module test fixes, RuleCompiler fixes, minor refactoring to code or sbt build, see [commits](https://github.com/scalacenter/scalafix/pull/1650/commits)
 
 
 
